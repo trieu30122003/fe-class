@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import NSXService from '../../service/NSXService';
 import { Link } from 'react-router-dom';
-import "./NSX.scss"
+import "./Loai.scss"
 import "../admin/home/home.scss";
 import Sidebar from '../../components/sidebar/Sidebar';
 import { Navbar } from 'react-bootstrap';

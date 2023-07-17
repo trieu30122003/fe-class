@@ -7,8 +7,6 @@ import ListNhanVien from "./pages/NhanVien/ListNhanVien";
 import ListVoucher from "./pages/Voucher/ListVoucher";
 import ListNSX from "./pages/NSX/ListNSX";
 import ListLoai from "./pages/Loai/ListLoai";
-import ListMauSac from "./pages/MauSac/ListMauSac";
-import ListManHinh from "./pages/ManHinh/ListManHinh";
 
 const publicRouters = [
     {path: '/', element: Home},
@@ -20,9 +18,7 @@ const publicRouters = [
     {path: '/nsx/', element: ListNSX},
     {path: '/addSP', element: AddSP},
     {path: '/nsx/', element: ListNSX},
-    {path: '/loai/', element: ListLoai},
-    {path: '/mau-sac/', element: ListMauSac},
-    {path: '/man-hinh/', element: ListManHinh}
+    {path: '/loai/', element: ListLoai}
 ]
 const privateRouters = []
 
