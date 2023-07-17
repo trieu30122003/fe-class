@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import AddIcon from '@mui/icons-material/Add';
+import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
+
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -51,6 +53,13 @@ const Sidebar = () => {
             <li>
               <AddIcon className="icon" />
               <span>khách hàng</span>
+            </li>
+          </Link>
+
+          <Link to="/nhan-vien/new/" style={{ textDecoration: "none" }}>
+            <li>
+              <ManOutlinedIcon className="icon" />
+              <span>Nhân Viên</span>
             </li>
           </Link>
 
