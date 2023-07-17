@@ -42,13 +42,36 @@ const Sidebar = () => {
               <span>Sản Phẩm</span>
             </li>
           </Link>
-          <Link to="/create-product" style={{ textDecoration: "none" }}>
+          <Link to="/nsx" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
-              <span>Tạo sản phẩm</span>
+              <span>Nhà sản xuất</span>
             </li>
           </Link>
-
+          <Link to="/loai" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Loại</span>
+            </li>
+          </Link>
+          <Link to="/mau-sac" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Màu sắc</span>
+            </li>
+          </Link>
+          <Link to="/man-hinh" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Màn hình</span>
+            </li>
+          </Link>
+          <Link to="/day-deo" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Dây đeo</span>
+            </li>
+          </Link>
           <Link to="/new/" style={{ textDecoration: "none" }}>
             <li>
               <AddIcon className="icon" />

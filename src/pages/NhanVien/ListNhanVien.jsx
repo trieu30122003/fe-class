@@ -57,7 +57,8 @@ class ListNhanVien extends Component {
                                         <th> Ngày sinh</th>
                                         <th> Giới tính</th>
                                         <th> Địa chỉ</th>
-                                        <th> SĐT</th>                    
+                                        <th> SĐT</th>          
+                                        <th> Chức vụ</th>            
                                         <th> Trạng thái</th>
                                         <th> Action</th>
                                     </tr>
@@ -73,7 +74,7 @@ class ListNhanVien extends Component {
                                                     <td> {nv.gioiTinh}</td>
                                                     <td> {nv.diaChi}</td>
                                                     <td> {nv.sdt}</td>
-                                                    
+                                                    <td> {nv.idChucVu.ten}</td>
                                                     <td> {nv.trangThai == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
                                                     <td>
                                                         <button onClick={() => this.editEmployee(nv.id)} className="btn btn-info">Update </button>
