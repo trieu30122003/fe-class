@@ -16,7 +16,7 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
-
+import RequestQuoteOutlinedIcon from '@mui/icons-material/RequestQuoteOutlined';
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -54,6 +54,13 @@ const Sidebar = () => {
               <AddIcon className="icon" />
               <span>khách hàng</span>
             </li>
+          </Link>
+          <Link to="/voucher/new/" style={{ textDecoration: "none" }}>
+            <li>
+              < RequestQuoteOutlinedIcon className="icon" />
+              <span>Voucher</span>
+            </li>
+
           </Link>
 
           <Link to="/nhan-vien/new/" style={{ textDecoration: "none" }}>
