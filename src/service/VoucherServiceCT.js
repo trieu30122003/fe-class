@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/voucher/new/";
+const EMPLOYEE_API_BASE_URL = "http://localhost:8080/voucherct/new/";
 
-class VoucherService {
+class VoucherServiceCT {
 
     getVC(){
         return axios.get(EMPLOYEE_API_BASE_URL);
@@ -22,4 +22,4 @@ class VoucherService {
 
 }
 
-export default new VoucherService()
+export default new VoucherServiceCT()

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import KhachHangService from '../service/KhachHangService';
 
 
-class CreateKhachHang extends Component {
+class CreateVoucher extends Component {
     constructor(props) {
         super(props)
 
@@ -131,4 +131,4 @@ class CreateKhachHang extends Component {
     }
 }
 
-export default CreateKhachHang
+export default CreateVoucher
