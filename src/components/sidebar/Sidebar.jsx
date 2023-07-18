@@ -83,6 +83,13 @@ const Sidebar = () => {
               < RequestQuoteOutlinedIcon className="icon" />
               <span>Voucher</span>
             </li>
+          </Link>
+          <Link to="/voucherct/new/" style={{ textDecoration: "none" }}>
+            <li>
+              < RequestQuoteOutlinedIcon className="icon" />
+              <span>VoucherCT</span>
+            </li>
+            
 
           </Link>
 

@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import "../admin/home/home.scss";
 import Sidebar from '../../components/sidebar/Sidebar';
 import { Navbar } from 'react-bootstrap';
-import voucherService from '../../service/VoucherService';
+import voucherService from '../../service/VoucherServiceCT';
 
-class ListVoucher extends Component {
+class ListVoucherCT extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            vouCher: []
+            vouCherct: []
         }
         this.addVoucher = this.addVoucher.bind(this);
         this.editVouCher = this.editVouCher.bind(this);
@@ -27,7 +27,7 @@ class ListVoucher extends Component {
 
     componentDidMount() {
         voucherService.getVC().then((res) => {
-            this.setState({ vouCher: res.data });
+            this.setState({ vouCherct: res.data });
         });
     }
 
@@ -52,29 +52,21 @@ class ListVoucher extends Component {
 
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th> Code</th>
-                                        <th> Tên </th>
-                                        <th> Ngày Bắt Đầu </th>
-                                        <th> Ngày Kết Thúc </th>
-                                        <th> Số Tiền Giảm </th>
-                                        <th> Số Lương </th>
-                                        <th> Trạng Thái </th>
+                                        <th>id_voucher</th>
+                                        <th>id_hoa_don</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Trạng Thái</th>
                                         <th> Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
-                                        this.state.vouCher.map(
+                                        this.state.vouCherct.map(
                                             vc =>
                                                 <tr key={vc.id}>
-                                                    <td>{vc.id}</td>
-                                                    <td> {vc.code} </td>
-                                                    <td>{vc.ten}</td>
-                                                    <td>{vc.ngayBatDau}</td>
-                                                    <td>{vc.ngayKetThuc}</td>
-                                                    <td>{vc.soTienGiam}</td>
-                                                    <td>{vc.soLuong}</td>
+                                                    <td>{vc.idVoucher.ten}</td>
+                                                    <td>{vc.idHoaDon.ma}</td>
+                                                    <td>{vc.tongTienGiam}</td>
                                                     <td>{vc.trangThai==1?"Hoạt Động":"Không Hoạt Động"}</td>
                                                  <td>
                                                         <button onClick={() => this.editEmployee(vc.id)} className="btn btn-info">Update </button>
@@ -95,4 +87,4 @@ class ListVoucher extends Component {
     }
 }
 
-export default ListVoucher;
+export default ListVoucherCT;
