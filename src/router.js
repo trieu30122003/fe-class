@@ -6,6 +6,7 @@ import AddSP from "./pages/SanPham/CreateSanPham";
 import ListNhanVien from "./pages/NhanVien/ListNhanVien";
 import ListVoucher from "./pages/Voucher/ListVoucher";
 import ListNSX from "./pages/NSX/ListNSX";
+import AddNSX from "./pages/NSX/CreateNSX";
 import ListLoai from "./pages/Loai/ListLoai";
 import ListVoucherCT from "./pages/VoucherCT/ListVoucherCT";
 
@@ -19,7 +20,7 @@ const publicRouters = [
     {path: '/products/', element: ListSanPham},
     {path: '/nsx/', element: ListNSX},
     {path: '/addSP', element: AddSP},
-    {path: '/nsx/', element: ListNSX},
+    {path: '/addNSX', element: AddNSX},
     {path: '/loai/', element: ListLoai}
 ]
 const privateRouters = []
