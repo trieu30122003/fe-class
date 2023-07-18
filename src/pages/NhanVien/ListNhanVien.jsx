@@ -11,7 +11,7 @@ class ListNhanVien extends Component {
         super(props)
 
         this.state = {
-           nhanViens: []
+            nhanViens: []
         }
         this.addNV = this.addNV.bind(this);
         this.editNV = this.editNV.bind(this);
@@ -28,6 +28,7 @@ class ListNhanVien extends Component {
     componentDidMount() {
         NhanVienService.getNV().then((res) => {
             this.setState({ nhanViens: res.data });
+
         });
     }
 
@@ -40,7 +41,7 @@ class ListNhanVien extends Component {
             <div className="home">
                 <Sidebar />
                 <div className="homeContainer">
-                    <Navbar/>
+                    <Navbar />
                     <div className='container'>
                         <h2 className="text-center">List Nhân Viên</h2>
                         <div className="row">
@@ -57,7 +58,8 @@ class ListNhanVien extends Component {
                                         <th> Ngày sinh</th>
                                         <th> Giới tính</th>
                                         <th> Địa chỉ</th>
-                                        <th> SĐT</th>                    
+                                        <th> SĐT</th>
+                                        <th> Chức Vụ</th>
                                         <th> Trạng thái</th>
                                         <th> Action</th>
                                     </tr>
@@ -73,7 +75,7 @@ class ListNhanVien extends Component {
                                                     <td> {nv.gioiTinh}</td>
                                                     <td> {nv.diaChi}</td>
                                                     <td> {nv.sdt}</td>
-                                                    
+                                                    <td> {nv.idChucVu.ten}</td>
                                                     <td> {nv.trangThai == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
                                                     <td>
                                                         <button onClick={() => this.editEmployee(nv.id)} className="btn btn-info">Update </button>

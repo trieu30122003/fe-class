@@ -15,5 +15,4 @@ const publicRouters = [
     {path: '/addSP', element: AddSP}
 ]
 const privateRouters = []
-
 export  {publicRouters, privateRouters}
