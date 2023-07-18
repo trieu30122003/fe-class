@@ -58,13 +58,8 @@ class ListNhanVien extends Component {
                                         <th> Ngày sinh</th>
                                         <th> Giới tính</th>
                                         <th> Địa chỉ</th>
-<<<<<<< HEAD
-                                        <th> SĐT</th>
-                                        <th> Chức Vụ</th>
-=======
-                                        <th> SĐT</th>          
-                                        <th> Chức vụ</th>            
->>>>>>> e9669248846f7377a5c8e26bd41f4118d31e4be1
+                                        <th> Số điện thoại</th>
+                                        <th> Chức vụ</th>
                                         <th> Trạng thái</th>
                                         <th> Action</th>
                                     </tr>
