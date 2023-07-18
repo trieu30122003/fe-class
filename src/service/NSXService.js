@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/nsx/hien-thi/";
+const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/nsx/all";
 
 class NSXService {
 
@@ -8,8 +8,8 @@ class NSXService {
         return axios.get(EMPLOYEE_API_BASE_URL);
     }
 
-    createNSX(employee){
-        return axios.post(EMPLOYEE_API_BASE_URL, employee);
+    createNSX(nsx){
+        return axios.post(EMPLOYEE_API_BASE_URL, nsx);
     }
 
     getNSXById(employeeId){

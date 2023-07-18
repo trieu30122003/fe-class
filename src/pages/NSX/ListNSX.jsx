@@ -19,10 +19,10 @@ class ListNSX extends Component {
     }
 
     viewNSX(id) {
-        this.props.history.push(`/products/${id}`);
+        this.props.history.push(`/viewNsx/${id}`);
     }
     editNSX(id) {
-        this.props.history.push(`/products/${id}`);
+        this.props.history.push(`/editNsx/${id}`);
     }
 
     componentDidMount() {
@@ -32,7 +32,7 @@ class ListNSX extends Component {
     }
 
     addNSX() {
-        this.props.history.push('/products/');
+        this.props.history.push('/addNSX');
     }
 
     render() {
@@ -42,8 +42,9 @@ class ListNSX extends Component {
                 <div className="homeContainer">
                     <Navbar />
                     <div className='container'>
+                    
                         <h2 className="text-center">List Nhà Sản Xuất</h2>
-                        <Link to="/addSP/" style={{ textDecoration: "none" }}>
+                        <Link to="/addNSX/" style={{ textDecoration: "none" }}>
                         <div className="row">
                             <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }}> Add </button>
                         </div>
