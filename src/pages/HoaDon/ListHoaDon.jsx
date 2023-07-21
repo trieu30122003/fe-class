@@ -48,25 +48,44 @@ class ListHoaDon extends Component {
                         <br></br>
                         <div className="row">
                             <table style={{ margin: "10px" }} id="customers">
-
-                                <thead>
+                            <thead>
                                     <tr>
-                                        <th> Chi tiết sản phẩm</th>
-                                        <th> Hóa Đơn</th>
-                                        <th> Đơn Giá</th>
-                                        <th> Trạng Thái </th>
+                                        <th> Mã</th>
+                                        <th> Ngày Tạo</th>
+                                        <th> Ngày Ship</th>
+                                        <th> Ngày Nhận</th>
+                                        <th> Tên Người Nhận </th>
+                                        <th> Địa Chỉ</th>
+                                        <th> SĐT</th>
+                                        <th> Số tiền giảm</th>
+                                        <th> Tình Trạng</th>
+                                        <th> Tổng tiền</th>
+                                        <th> Thành tiền</th>
+                                        <th> Khách Hàng</th>
+                                        <th> Nhân Viên</th>
+                                        <th> Phương thức thanh toán</th>
                                         <th> Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
-                                        this.state.hoadons.map(
-                                        hd =>
+                                         this.state.hoadons.map(
+                                            hd =>
                                                 <tr key={hd.id}>
-                                                    <td> {hd.idCtsp.ma} </td>
-                                                    <td> {hd.idHoaDon.ma}</td>
-                                                    <td> {hd.donGia}</td>
-                                                    <td> {hd.trangThai === 1 ? "Đã Thanh Toán" : "Chưa Thanh Toán"}</td>
+                                                    <td> {hd.ma} </td>
+                                                    <td> {hd.ngayTao}</td>
+                                                    <td> {hd.ngayShip}</td>
+                                                    <td> {hd.ngayNhan}</td>
+                                                    <td> {hd.tenNguoiNhan}</td>
+                                                    <td> {hd.diaChi}</td>
+                                                    <td> {hd.sdt}</td>
+                                                    <td> {hd.soTienGiam}</td>
+                                                    <td> {hd.tinhTrang === 1 ? "Đã Thanh Toán" : "Chưa Thanh Toán"}</td>
+                                                    <td> {hd.tongTien}</td>
+                                                    <td> {hd.thanhTien}</td>
+                                                    <td> {hd.idKhachHang.ma}</td>
+                                                    <td> {hd.idNhanVien.ma}</td>
+                                                    <td> {hd.idPhuongThucThanhToan.ma}</td>
                                                     <td>
                                                         <button onClick={() => this.editEmployee(hd.id)} className="btn btn-info">Update </button>
                                                         <button style={{ marginLeft: "10px" }} onClick={() => this.viewEmployee(hd.id)} className="btn btn-info">View </button>
@@ -75,6 +94,7 @@ class ListHoaDon extends Component {
                                         )
                                     }
                                 </tbody>
+                                       
                             </table>
 
                         </div>

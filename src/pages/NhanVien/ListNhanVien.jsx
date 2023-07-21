@@ -77,10 +77,15 @@ class ListNhanVien extends Component {
                                                     <td> {nv.gioiTinh}</td>
                                                     <td> {nv.diaChi}</td>
                                                     <td> {nv.sdt}</td>
+<<<<<<< HEAD
+                                                    <td> {nv.idChucVu.ten}</td>
+                                                    <td> {nv.trangThai === 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
+=======
 
 
                                                     <td> {nv.idChucVu.ten}</td>
                                                     <td> {nv.trangThai == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
+>>>>>>> f4e871da77a879f1b21fdbc077e6811d8905836d
                                                     <td>
                                                         <button onClick={() => this.editEmployee(nv.id)} className="btn btn-info">Update </button>
                                                         <button style={{ marginLeft: "10px" }} onClick={() => this.viewEmployee(nv.id)} className="btn btn-info">View </button>
