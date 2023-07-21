@@ -123,13 +123,14 @@ class CreateSanPham extends Component {
     console.log("SPCT" + JSON.stringify(sp));
     SanPhamChiTietService.createSP(sp)
       .then((response) => {
-        // Xử lý dữ liệu khi thành công
+        window.location.href =('/products')
         console.log(response.data);
       })
       .catch((error) => {
         // Xử lý lỗi khi gọi API
         console.error(error);
       });
+      window.location.href =('/products')
   }
   render() {
     return (

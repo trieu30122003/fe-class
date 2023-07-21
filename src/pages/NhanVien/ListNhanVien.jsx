@@ -44,9 +44,11 @@ class ListNhanVien extends Component {
                     <Navbar />
                     <div className='container'>
                         <h2 className="text-center">List Nhân Viên</h2>
-                        <div className="row">
-                            <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }} onClick={this.addEmployee}> Add </button>
-                        </div>
+                        <Link to="/nhan-vien/add" style={{ textDecoration: "none" }}>
+                            <div className="row">
+                                <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }}> Add </button>
+                            </div>
+                        </Link>
                         <br></br>
                         <div className="row">
                             <table style={{ margin: "10px" }} id="customers">
@@ -75,8 +77,15 @@ class ListNhanVien extends Component {
                                                     <td> {nv.gioiTinh}</td>
                                                     <td> {nv.diaChi}</td>
                                                     <td> {nv.sdt}</td>
+<<<<<<< HEAD
                                                     <td> {nv.idChucVu.ten}</td>
                                                     <td> {nv.trangThai === 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
+=======
+
+
+                                                    <td> {nv.idChucVu.ten}</td>
+                                                    <td> {nv.trangThai == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
+>>>>>>> f4e871da77a879f1b21fdbc077e6811d8905836d
                                                     <td>
                                                         <button onClick={() => this.editEmployee(nv.id)} className="btn btn-info">Update </button>
                                                         <button style={{ marginLeft: "10px" }} onClick={() => this.viewEmployee(nv.id)} className="btn btn-info">View </button>
