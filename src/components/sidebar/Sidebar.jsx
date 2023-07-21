@@ -40,13 +40,19 @@ const Sidebar = () => {
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
-              <span>Sản Phẩm</span>
+              <span>Sản Phẩm Chi Tiết</span>
             </li>
           </Link>
           <Link to="/nsx" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
               <span>Nhà sản xuất</span>
+            </li>
+          </Link>
+          <Link to="/mau-sac/" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Màu sắc</span>
             </li>
           </Link>
           <Link to="/loai" style={{ textDecoration: "none" }}>

@@ -3,7 +3,6 @@ import Home from "./pages/admin/home/Home";
 import ListKhachHang from "./pages/KhachHang/ListKhachHang";
 import ListSanPham from "./pages/SanPham/ListSanPham";
 import AddSP from "./pages/SanPham/CreateSanPham";
-import ListNhanVien from "./pages/NhanVien/ListNhanVien";
 import ListVoucher from "./pages/Voucher/ListVoucher";
 import ListHoaDon from "./pages/HoaDon/ListHoaDon";
 import ListNSX from "./pages/NSX/ListNSX";
@@ -15,6 +14,8 @@ import CreateKhachHang from "./pages/KhachHang/CreateKhachHang";
 import ViewKhachHang from "./pages/KhachHang/ViewKhachHang";
 import ListNhanVien from "./pages/NhanVien/ListNhanVien";
 import CreateNhanVien from "./pages/NhanVien/CreateNhanVien";
+import ListMauSac from "./pages/MauSac/ListMauSac";
+import AddMauSac from "./pages/MauSac/CreateMauSac";
 
 const publicRouters = [
     {path: '/', element: Home},
@@ -28,8 +29,10 @@ const publicRouters = [
     {path: '/hdct/hien-thi/', element: ListHoaDon},
     {path: '/voucherct/new/', element: ListVoucherCT},
     {path: '/nsx/', element: ListNSX},
+    {path: '/mau-sac/', element: ListMauSac},
     {path: '/addSP', element: AddSP},
     {path: '/addNSX', element: AddNSX},
+    {path: '/addMS', element: AddMauSac},
     {path: '/loai/', element: ListLoai},
     {path: '/products/:id', element: SanPhamDetail},
     {path: '/new/add', element: CreateKhachHang},

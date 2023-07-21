@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/mau-sac/hien-thi/";
+const EMPLOYEE_API_BASE_URL = "http://localhost:8080/mau-sac/hien-thi";
 
 class LoaiService {
 
@@ -8,11 +8,11 @@ class LoaiService {
         return axios.get(EMPLOYEE_API_BASE_URL);
     }
 
-    createNSX(nsx){
+    createMS(nsx){
         return axios.post(EMPLOYEE_API_BASE_URL, nsx);
     }
 
-    getNSXById(employeeId){
+    getMSById(employeeId){
         return axios.get(EMPLOYEE_API_BASE_URL + '/' + employeeId);
     }
 
@@ -20,8 +20,8 @@ class LoaiService {
         return axios.put(EMPLOYEE_API_BASE_URL + '/' + employeeId, employee);
     }
 
-    deleteNSX(idNSX){
-        return axios.delete(EMPLOYEE_API_BASE_URL + '/' + idNSX);
+    deleteMS(idMS){
+        return axios.delete(EMPLOYEE_API_BASE_URL + '/' + idMS);
     }
 }
 
