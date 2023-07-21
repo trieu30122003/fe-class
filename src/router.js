@@ -10,13 +10,15 @@ import AddNSX from "./pages/NSX/CreateNSX";
 import ListLoai from "./pages/Loai/ListLoai";
 import SanPhamDetail from "./pages/SanPham/SanPhamDetail";
 import ListVoucherCT from "./pages/VoucherCT/ListVoucherCT";
+import CreateKhachHang from "./pages/KhachHang/CreateKhachHang";
+import ViewKhachHang from "./pages/KhachHang/ViewKhachHang";
+
 
 
 
 const publicRouters = [
     {path: '/', element: Home},
     {path: '/new/', element: ListKhachHang},
-    {path: '/nhan-vien/new/', element: ListNhanVien},
     {path: '/home', element: UserHome},
     {path: '/voucher/new/', element: ListVoucher},
     {path: '/products/', element: ListSanPham},
@@ -26,6 +28,8 @@ const publicRouters = [
     {path: '/addNSX', element: AddNSX},
     {path: '/loai/', element: ListLoai},
     {path: '/products/:id', element: SanPhamDetail},
+    {path: '/new/add', element: CreateKhachHang},
+    {path: '/new/:id', element: ViewKhachHang},
 ]
 const privateRouters = []
 
