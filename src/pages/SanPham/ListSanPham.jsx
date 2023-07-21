@@ -19,7 +19,7 @@ class ListSanPham extends Component {
     }
 
     viewSP(id) {
-        this.props.history.push(`/products/${id}`);
+        window.location.href=(`/products/${id}`);
     }
     editSP(id) {
         this.props.history.push(`/products/${id}`);
@@ -43,7 +43,7 @@ class ListSanPham extends Component {
                     <Navbar />
                     <div className='container'>
                         <h2 className="text-center">List Sản Phẩm</h2>
-                        <Link to="/addSP/" style={{ textDecoration: "none" }}>
+                        <Link to="/addSP" style={{ textDecoration: "none" }}>
                         <div className="row">
                             <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }}> Add </button>
                         </div>
@@ -83,7 +83,7 @@ class ListSanPham extends Component {
                                                     <td> {sp.tinhTrang == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
                                                     <td>
                                                         <button onClick={() => this.editEmployee(sp.id)} className="btn btn-info">Update </button>
-                                                        <button style={{ marginLeft: "10px" }} onClick={() => this.viewEmployee(sp.id)} className="btn btn-info">View </button>
+                                                        <button style={{ marginLeft: "10px" }} onClick={() => this.viewSP(sp.id)} className="btn btn-info">View </button>
                                                     </td>
                                                 </tr>
                                         )

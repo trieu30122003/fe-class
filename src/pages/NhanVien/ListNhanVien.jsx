@@ -11,7 +11,7 @@ class ListNhanVien extends Component {
         super(props)
 
         this.state = {
-           nhanViens: []
+            nhanViens: []
         }
         this.addNV = this.addNV.bind(this);
         this.editNV = this.editNV.bind(this);
@@ -28,6 +28,7 @@ class ListNhanVien extends Component {
     componentDidMount() {
         NhanVienService.getNV().then((res) => {
             this.setState({ nhanViens: res.data });
+
         });
     }
 
@@ -40,7 +41,7 @@ class ListNhanVien extends Component {
             <div className="home">
                 <Sidebar />
                 <div className="homeContainer">
-                    <Navbar/>
+                    <Navbar />
                     <div className='container'>
                         <h2 className="text-center">List Nhân Viên</h2>
                         <div className="row">
@@ -50,14 +51,15 @@ class ListNhanVien extends Component {
                         <div className="row">
                             <table style={{ margin: "10px" }} id="customers">
 
-                                <thead>
+                            <thead>
                                     <tr>
                                         <th> Mã</th>
                                         <th> Họ và tên</th>
                                         <th> Ngày sinh</th>
                                         <th> Giới tính</th>
                                         <th> Địa chỉ</th>
-                                        <th> SĐT</th>                    
+                                        <th> Số điện thoại</th>
+                                        <th> Chức vụ</th>
                                         <th> Trạng thái</th>
                                         <th> Action</th>
                                     </tr>
@@ -73,6 +75,10 @@ class ListNhanVien extends Component {
                                                     <td> {nv.gioiTinh}</td>
                                                     <td> {nv.diaChi}</td>
                                                     <td> {nv.sdt}</td>
+<<<<<<< HEAD
+=======
+                                                    <td> {nv.idChucVu.ten}</td>
+>>>>>>> 682b800952f466ccaae2513f418dc8db7a9fec31
                                                     <td> {nv.trangThai == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
                                                     <td>
                                                         <button onClick={() => this.editEmployee(nv.id)} className="btn btn-info">Update </button>

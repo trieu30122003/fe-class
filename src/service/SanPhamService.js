@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/day-deo/hien-thi/";
+const EMPLOYEE_API_BASE_URL = "http://localhost:8080/san-pham/hien-thi/";
 
-class LoaiService {
+class SanPhamService {
 
-    getDayDeo(){
+    getSP(){
         return axios.get(EMPLOYEE_API_BASE_URL);
     }
 
@@ -25,4 +25,4 @@ class LoaiService {
     }
 }
 
-export default new LoaiService()
+export default new SanPhamService()

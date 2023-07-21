@@ -1,39 +1,40 @@
 import React, { Component } from 'react'
 import KhachHangService from '../../service/KhachHangService';
-import { Link } from 'react-router-dom';
 import "./KhachHang.scss"
 import "../admin/home/home.scss";
 import Sidebar from '../../components/sidebar/Sidebar';
 import { Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 class ListKhachHang extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            khachHangs: []
+            kh: []
         }
-        this.addKH = this.addKH.bind(this);
+        // this.addKH = this.addKH.bind(this);
         this.editKH = this.editKH.bind(this);
 
     }
 
     viewKH(id) {
-        this.props.history.push(`/new/${id}`);
+        this.props.history.push(`/new/view/${id}`);
     }
     editKH(id) {
         this.props.history.push(`/new/${id}`);
     }
 
+
     componentDidMount() {
         KhachHangService.getKH().then((res) => {
-            this.setState({ khachHangs: res.data });
+            this.setState({ kh: res.data });
         });
     }
 
-    addKH() {
-        this.props.history.push('/new/');
-    }
+    // addKH() {
+    //     this.props.history.push('/create/');
+    // }
 
     render() {
         return (
@@ -42,14 +43,25 @@ class ListKhachHang extends Component {
                 <div className="homeContainer">
                     <Navbar />
                     <div className='container'>
+
                         <h2 className="text-center">List Khách Hàng</h2>
+
+                        <Link to="/addKH" style={{ textDecoration: "none" }}>
                         <div className="row">
-                            <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }} onClick={this.addEmployee}> Add </button>
+                            <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }}> Add </button>
                         </div>
+                        </Link>
+
+                        <Link to="/new/add" style={{ textDecoration: "none" }}>
+                            <div className="row">
+                                <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }}> Add </button>
+                            </div>
+                        </Link>
+
                         <br></br>
+
                         <div className="row">
                             <table style={{ margin: "10px" }} id="customers">
-
                                 <thead>
                                     <tr>
                                         <th> Mã</th>
@@ -65,7 +77,7 @@ class ListKhachHang extends Component {
                                 </thead>
                                 <tbody>
                                     {
-                                        this.state.khachHangs.map(
+                                        this.state.kh.map(
                                             kh =>
                                                 <tr key={kh.id}>
                                                     <td> {kh.ma} </td>
@@ -75,10 +87,12 @@ class ListKhachHang extends Component {
                                                     <td> {kh.diaChi}</td>
                                                     <td> {kh.sdt}</td>
                                                     <td> {kh.email}</td>
-                                                    <td> {kh.tinhTrang == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
+                                                    <td> {kh.tinhTrang === 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
                                                     <td>
-                                                        <button onClick={() => this.editEmployee(kh.id)} className="btn btn-info">Update </button>
-                                                        <button style={{ marginLeft: "10px" }} onClick={() => this.viewEmployee(kh.id)} className="btn btn-info">View </button>
+                                                        <Link to={`/new/${kh.id}`}>
+                                                            <button className="btn btn-info">View </button>
+                                                        </Link>
+                                                        {/* <button style={{ marginLeft: "10px" }} onClick={() => this.viewKH(kh.id)} className="btn btn-info">View </button> */}
                                                     </td>
                                                 </tr>
                                         )
