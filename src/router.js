@@ -5,6 +5,7 @@ import ListSanPham from "./pages/SanPham/ListSanPham";
 import AddSP from "./pages/SanPham/CreateSanPham";
 import ListNhanVien from "./pages/NhanVien/ListNhanVien";
 import ListVoucher from "./pages/Voucher/ListVoucher";
+import ListHoaDon from "./pages/HoaDon/ListHoaDon";
 
 const publicRouters = [
     {path: '/', element: Home},
@@ -13,7 +14,8 @@ const publicRouters = [
     {path: '/home', element: UserHome},
     {path: '/voucher/new/', element: ListVoucher},
     {path: '/products/', element: ListSanPham},
-    {path: '/addSP', element: AddSP}
+    {path: '/addSP', element: AddSP},
+    {path: '/hdct/hien-thi/', element: ListHoaDon}
 ]
 const privateRouters = []
 
