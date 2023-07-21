@@ -75,10 +75,9 @@ class ListNhanVien extends Component {
                                                     <td> {nv.gioiTinh}</td>
                                                     <td> {nv.diaChi}</td>
                                                     <td> {nv.sdt}</td>
-<<<<<<< HEAD
-=======
+
+
                                                     <td> {nv.idChucVu.ten}</td>
->>>>>>> 682b800952f466ccaae2513f418dc8db7a9fec31
                                                     <td> {nv.trangThai == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
                                                     <td>
                                                         <button onClick={() => this.editEmployee(nv.id)} className="btn btn-info">Update </button>
