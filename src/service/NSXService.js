@@ -20,6 +20,9 @@ class NSXService {
         return axios.put(EMPLOYEE_API_BASE_URL + '/' + employeeId, employee);
     }
 
+    deleteNSX(idNSX){
+        return axios.delete(EMPLOYEE_API_BASE_URL + '/' + idNSX);
+    }
 }
 
 export default new NSXService()

@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { publicRouters } from "./router";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+
 // import ListKhachHang from "./components/ListKhachHang";
 function App() {
   const { darkMode } = useContext(DarkModeContext);

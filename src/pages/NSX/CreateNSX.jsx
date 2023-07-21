@@ -11,22 +11,23 @@ class CreateNSX extends Component {
         this.state = {
             ma: '',
             ten: '',
-            tinh_trang: ''
-            
-        }
-        this.changeMaHandler = this.changeMaHandler.bind (this)
-        this.changeTenHandler = this.changeTenHandler.bind (this)
-        this.changeTrangThaiHandler = this.changeTrangThaiHandler.bind (this)
-        this.saveNSX = this.saveNSX.bind (this)
-    }
-    saveNSX = (e) => {
-        e.preventDefault();
-        let nsx = {ma: this.state.ma, ten: this.state.ten, tinh_trang: this.state.tinh_trang};
-        console.log('nsx  =>' + JSON.stringify(nsx)) ;
+            tinhTrang: ''
 
-        NSXService.createNSX(nsx).then(res => {
-            this.props.history.push("/nsx/");
-        });
+        }
+        this.changeMaHandler = this.changeMaHandler.bind(this)
+        this.changeTenHandler = this.changeTenHandler.bind(this)
+        this.changeTrangThaiHandler = this.changeTrangThaiHandler.bind(this)
+        this.saveNSX = this.saveNSX.bind(this)
+    }
+    saveNSX(e){
+        e.preventDefault();
+        let nsx = { ma: this.state.ma, ten: this.state.ten, tinhTrang: this.state.tinhTrang };
+        console.log('nsx  =>' + JSON.stringify(nsx));
+        NSXService.createNSX(nsx).then(res =>{
+            alert("Thêm thành công");
+            window.location.href="/nsx"
+        })
+        
     }
     changeMaHandler(event) {
         this.setState({ ma: event.target.value })
@@ -35,9 +36,9 @@ class CreateNSX extends Component {
         this.setState({ ten: event.target.value })
     }
     changeTrangThaiHandler(event) {
-        this.setState({ tinh_trang: event.target.value })
+        this.setState({ tinhTrang: event.target.value })
     }
-    cancel(){
+    cancel() {
         this.props.history.push("/nsx")
     }
     render() {
@@ -61,13 +62,13 @@ class CreateNSX extends Component {
                             </div>
                             <div className='form-group'>
                                 <label htmlFor="">Trạng Thái</label>
-                                <input type="text" placeholder='Nhập trạng thái' name='tinh_trang' className='form-control'
-                                    value={this.state.tinh_trang} onChange={this.changeTrangThaiHandler} />
+                                <input type="text" placeholder='Nhập trạng thái' name='tinhTrang' className='form-control'
+                                    value={this.state.tinhTrang} onChange={this.changeTrangThaiHandler} />
                             </div>
                             <button className='btn btn-outline-primary' onClick={this.saveNSX}> ADD</button>
-                           
+
                         </form>
-                        
+
                     </div>
 
                 </div>

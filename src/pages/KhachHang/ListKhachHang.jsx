@@ -46,6 +46,12 @@ class ListKhachHang extends Component {
 
                         <h2 className="text-center">List Khách Hàng</h2>
 
+                        <Link to="/addKH" style={{ textDecoration: "none" }}>
+                        <div className="row">
+                            <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }}> Add </button>
+                        </div>
+                        </Link>
+
                         <Link to="/new/add" style={{ textDecoration: "none" }}>
                             <div className="row">
                                 <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }}> Add </button>
