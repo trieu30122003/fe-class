@@ -8,8 +8,8 @@ class SanPhamService {
         return axios.get(EMPLOYEE_API_BASE_URL);
     }
 
-    createSP(employee){
-        return axios.post(EMPLOYEE_API_BASE_URL, employee);
+    createSP(spct){
+        return axios.post(EMPLOYEE_API_BASE_URL, spct);
     }
 
     getSPById(employeeId){

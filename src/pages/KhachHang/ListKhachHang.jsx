@@ -43,12 +43,11 @@ class ListKhachHang extends Component {
                     <Navbar />
                     <div className='container'>
                         <h2 className="text-center">List Khách Hàng</h2>
-                        <Link to={'/addKH'}>
+                        <Link to="/addKH" style={{ textDecoration: "none" }}>
                         <div className="row">
-                            <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }} onClick={this.addEmployee}> Add </button>
+                            <button className="btn btn-primary" style={{ width: "100px", margin: "10px" }}> Add </button>
                         </div>
                         </Link>
-                        
                         <br></br>
                         <div className="row">
                             <table style={{ margin: "10px" }} id="customers">
