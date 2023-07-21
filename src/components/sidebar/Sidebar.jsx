@@ -62,12 +62,6 @@ const Sidebar = () => {
               <span>Loại</span>
             </li>
           </Link>
-          <Link to="/mau-sac" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Màu sắc</span>
-            </li>
-          </Link>
           <Link to="/man-hinh" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
