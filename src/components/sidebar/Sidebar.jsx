@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import AddIcon from '@mui/icons-material/Add';
+import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
+import RequestQuoteOutlinedIcon from '@mui/icons-material/RequestQuoteOutlined';
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -40,17 +42,61 @@ const Sidebar = () => {
               <span>Sản Phẩm</span>
             </li>
           </Link>
-          <Link to="/create-product" style={{ textDecoration: "none" }}>
+          <Link to="/nsx" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
-              <span>Tạo sản phẩm</span>
+              <span>Nhà sản xuất</span>
             </li>
           </Link>
-
+          <Link to="/loai" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Loại</span>
+            </li>
+          </Link>
+          <Link to="/mau-sac" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Màu sắc</span>
+            </li>
+          </Link>
+          <Link to="/man-hinh" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Màn hình</span>
+            </li>
+          </Link>
+          <Link to="/day-deo" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Dây đeo</span>
+            </li>
+          </Link>
           <Link to="/new/" style={{ textDecoration: "none" }}>
             <li>
               <AddIcon className="icon" />
               <span>khách hàng</span>
+            </li>
+          </Link>
+          <Link to="/voucher/new/" style={{ textDecoration: "none" }}>
+            <li>
+              < RequestQuoteOutlinedIcon className="icon" />
+              <span>Voucher</span>
+            </li>
+          </Link>
+          <Link to="/voucherct/new/" style={{ textDecoration: "none" }}>
+            <li>
+              < RequestQuoteOutlinedIcon className="icon" />
+              <span>VoucherCT</span>
+            </li>
+            
+
+          </Link>
+
+          <Link to="/nhan-vien/new/" style={{ textDecoration: "none" }}>
+            <li>
+              <ManOutlinedIcon className="icon" />
+              <span>Nhân Viên</span>
             </li>
           </Link>
 
