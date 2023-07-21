@@ -18,6 +18,7 @@ import AddIcon from '@mui/icons-material/Add';
 import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
 import RequestQuoteOutlinedIcon from '@mui/icons-material/RequestQuoteOutlined';
 import ReceiptLongRoundedIcon from '@mui/icons-material/ReceiptLongRounded';
+import InsertDriveFileRoundedIcon from '@mui/icons-material/InsertDriveFileRounded';
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -82,6 +83,12 @@ const Sidebar = () => {
           <Link to="/hdct/hien-thi/" style={{ textDecoration: "none" }}>
             <li>
               <ReceiptLongRoundedIcon className="icon" />
+              <span>Hóa Đơn Chi Tiết</span>
+            </li>
+          </Link>
+          <Link to="/hoa-don/hien-thi/" style={{ textDecoration: "none" }}>
+            <li>
+              <InsertDriveFileRoundedIcon className="icon" />
               <span>Hóa Đơn</span>
             </li>
           </Link>

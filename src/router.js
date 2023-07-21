@@ -5,9 +5,9 @@ import ListSanPham from "./pages/SanPham/ListSanPham";
 import AddSP from "./pages/SanPham/CreateSanPham";
 import ListNhanVien from "./pages/NhanVien/ListNhanVien";
 import ListVoucher from "./pages/Voucher/ListVoucher";
-<<<<<<< HEAD
-import ListHoaDon from "./pages/HoaDon/ListHoaDon";
-=======
+
+import ListHoaDonChiTiet from "./pages/HoaDonChiTiet/ListHoaDonChiTiet";
+
 import ListNSX from "./pages/NSX/ListNSX";
 import AddNSX from "./pages/NSX/CreateNSX";
 import ListLoai from "./pages/Loai/ListLoai";
@@ -15,10 +15,11 @@ import SanPhamDetail from "./pages/SanPham/SanPhamDetail";
 import ListVoucherCT from "./pages/VoucherCT/ListVoucherCT";
 import CreateKhachHang from "./pages/KhachHang/CreateKhachHang";
 import ViewKhachHang from "./pages/KhachHang/ViewKhachHang";
+import ListHoaDon from "./pages/HoaDon/ListHoaDon";
 
 
 
->>>>>>> 682b800952f466ccaae2513f418dc8db7a9fec31
+
 
 const publicRouters = [
     {path: '/', element: Home},
@@ -26,10 +27,11 @@ const publicRouters = [
     {path: '/home', element: UserHome},
     {path: '/voucher/new/', element: ListVoucher},
     {path: '/products/', element: ListSanPham},
-<<<<<<< HEAD
+
     {path: '/addSP', element: AddSP},
-    {path: '/hdct/hien-thi/', element: ListHoaDon}
-=======
+    {path: '/hdct/hien-thi/', element: ListHoaDonChiTiet},
+    {path: '/hoa-don/hien-thi/', element: ListHoaDon},
+
     {path: '/voucherct/new/', element: ListVoucherCT},
     {path: '/nsx/', element: ListNSX},
     {path: '/addSP', element: AddSP},
@@ -38,7 +40,8 @@ const publicRouters = [
     {path: '/products/:id', element: SanPhamDetail},
     {path: '/new/add', element: CreateKhachHang},
     {path: '/new/:id', element: ViewKhachHang},
->>>>>>> 682b800952f466ccaae2513f418dc8db7a9fec31
+    
+
 ]
 const privateRouters = []
 
