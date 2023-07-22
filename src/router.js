@@ -15,6 +15,7 @@ import ListVoucherCT from "./pages/VoucherCT/ListVoucherCT";
 import CreateKhachHang from "./pages/KhachHang/CreateKhachHang";
 import ViewKhachHang from "./pages/KhachHang/ViewKhachHang";
 import CreateNhanVien from "./pages/NhanVien/CreateNhanVien";
+import ViewVoucher from "./pages/Voucher/ViewVoucher";
 
 
 const publicRouters = [
@@ -26,6 +27,7 @@ const publicRouters = [
     {path: '/voucher/new/', element: ListVoucher},
     {path: '/products/', element: ListSanPham},
     {path: '/addSP', element: AddSP},
+
     {path: '/hdct/hien-thi/', element: ListHoaDonChiTiet},
     {path: '/hoa-don/hien-thi/', element: ListHoaDon},
     {path: '/addSP', element: AddSP},
@@ -37,6 +39,8 @@ const publicRouters = [
     {path: '/products/:id', element: SanPhamDetail},
     {path: '/new/add', element: CreateKhachHang},
     {path: '/new/:id', element: ViewKhachHang},
+    {path: '/voucher/new/:id', element: ViewVoucher},
+
 
 ]
 const privateRouters = []
