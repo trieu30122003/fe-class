@@ -1,18 +1,18 @@
 import { useState } from "react";
-import { Link, useNavigate , useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import KhachHangService from "../../service/KhachHangService";
 
 
-const AddEmployee  = () => {
-    const[ma, setMa] = useState('');
-    const[ho, setHo] = useState('');
-    const history = useNavigate ();
-    const {id} = useParams();
+const AddEmployee = () => {
+    const [ma, setMa] = useState('');
+    const [ho, setHo] = useState('');
+    const history = useNavigate();
+    const { id } = useParams();
 
     // const saveKH = (e) => {
     //     e.preventDefault();
-        
+
     //     const kh = {ma, ho, id};
     //     if (id) {
     //         //update
@@ -49,19 +49,19 @@ const AddEmployee  = () => {
                 })
         }
     }, [id])
-    return(
+    return (
         <div className="container">
             <h3>{ma}</h3>
-            <hr/>
+            <hr />
             <form>
-            <div className='form-group'>
-                                <label htmlFor="">Mã</label>
-                                <input type="text" placeholder=' mã' name='ma' className='form-control'
-                                    value={ma}  />
-                            </div>
+                <div className='form-group'>
+                    <label htmlFor="">Mã</label>
+                    <input type="text" placeholder=' mã' name='ma' className='form-control'
+                        value={ma} />
+                </div>
                 <div className="form-group">
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         className="form-control col-4"
                         id="ho"
                         value={ho}
@@ -70,15 +70,15 @@ const AddEmployee  = () => {
                     />
 
                 </div>
-                
+
                 {/* <div >
                     <button onClick={(e) => saveKH(e)} className="btn btn-primary">Save</button>
                 </div> */}
             </form>
-            <hr/>
+            <hr />
             <Link to="/new">Back to List</Link>
         </div>
     )
 }
 
-export default AddEmployee ;
+export default AddEmployee;
