@@ -29,7 +29,6 @@ const publicRouters = [
     {path: '/voucher/new/', element: ListVoucher},
     {path: '/products/', element: ListSanPham},
     {path: '/addSP', element: AddSP},
-
     {path: '/hdct/hien-thi/', element: ListHoaDonChiTiet},
     {path: '/hoa-don/hien-thi/', element: ListHoaDon},
     {path: '/voucherct/new/', element: ListVoucherCT},
