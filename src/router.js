@@ -3,7 +3,6 @@ import Home from "./pages/admin/home/Home";
 import ListKhachHang from "./pages/KhachHang/ListKhachHang";
 import ListSanPham from "./pages/SanPham/ListSanPham";
 import AddSP from "./pages/SanPham/CreateSanPham";
-import ListNhanVien from "./pages/NhanVien/ListNhanVien";
 import ListVoucher from "./pages/Voucher/ListVoucher";
 import ListHoaDonChiTiet from "./pages/HoaDonChiTiet/ListHoaDonChiTiet";
 import ListHoaDon from "./pages/HoaDon/ListHoaDon";
@@ -16,6 +15,8 @@ import CreateKhachHang from "./pages/KhachHang/CreateKhachHang";
 import ViewKhachHang from "./pages/KhachHang/ViewKhachHang";
 import CreateNhanVien from "./pages/NhanVien/CreateNhanVien";
 import ViewVoucher from "./pages/Voucher/ViewVoucher";
+
+
 
 
 const publicRouters = [
@@ -40,8 +41,6 @@ const publicRouters = [
     {path: '/new/add', element: CreateKhachHang},
     {path: '/new/:id', element: ViewKhachHang},
     {path: '/voucher/new/:id', element: ViewVoucher},
-
-
 ]
 const privateRouters = []
 

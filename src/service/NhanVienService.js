@@ -1,23 +1,23 @@
 import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/nhan-vien/new/";
+const NHANVIEN_API_BASE_URL = "http://localhost:8080/nhan-vien/new";
 
 class NhanVienService {
 
     getNV(){
-        return axios.get(EMPLOYEE_API_BASE_URL);
+        return axios.get(NHANVIEN_API_BASE_URL+ '/');
     }
 
     createNV(employee){
-        return axios.post(EMPLOYEE_API_BASE_URL, employee);
+        return axios.post(NHANVIEN_API_BASE_URL, employee);
     }
 
-    getNVById(employeeId){
-        return axios.get(EMPLOYEE_API_BASE_URL + '/' + employeeId);
+    getNVById(id){
+        return axios.get(NHANVIEN_API_BASE_URL + '/' + id);
     }
 
-    updateNV(employee, employeeId){
-        return axios.put(EMPLOYEE_API_BASE_URL + '/' + employeeId, employee);
+    updateNV(nv, employeeId){
+        return axios.put(NHANVIEN_API_BASE_URL + '/' + employeeId, nv);
     }
 
 }
