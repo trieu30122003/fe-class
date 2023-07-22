@@ -19,7 +19,7 @@ class ListNhanVien extends Component {
     }
 
     viewNV(id) {
-        this.props.history.push(`/new/${id}`);
+        this.props.history.push(`/nhan-vien/new/${id}`);
     }
     editNV(id) {
         this.props.history.push(`/new/${id}`);
@@ -81,8 +81,10 @@ class ListNhanVien extends Component {
 
                                                     <td> {nv.trangThai == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
                                                     <td>
-                                                        <button onClick={() => this.editEmployee(nv.id)} className="btn btn-info">Update </button>
-                                                        <button style={{ marginLeft: "10px" }} onClick={() => this.viewEmployee(nv.id)} className="btn btn-info">View </button>
+                                                        {/* <button onClick={() => this.editEmployee(nv.id)} className="btn btn-info">Update </button> */}
+                                                        <Link to={`/nhan-vien/new/${nv.id}`}>
+                                                            <button className="btn btn-info">View </button>
+                                                        </Link>
                                                     </td>
                                                 </tr>
                                         )

@@ -15,6 +15,7 @@ import CreateKhachHang from "./pages/KhachHang/CreateKhachHang";
 import ViewKhachHang from "./pages/KhachHang/ViewKhachHang";
 import CreateNhanVien from "./pages/NhanVien/CreateNhanVien";
 import ListNhanVien from "./pages/NhanVien/ListNhanVien";
+import DetailNhanVien from "./pages/NhanVien/DetailNhanVien";
 
 
 const publicRouters = [
@@ -37,6 +38,7 @@ const publicRouters = [
     {path: '/products/:id', element: SanPhamDetail},
     {path: '/new/add', element: CreateKhachHang},
     {path: '/new/:id', element: ViewKhachHang},
+    {path: '/nhan-vien/new/:id', element: DetailNhanVien}
 
 ]
 const privateRouters = []
