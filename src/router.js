@@ -7,6 +7,7 @@ import ListVoucher from "./pages/Voucher/ListVoucher";
 import ListHoaDonChiTiet from "./pages/HoaDonChiTiet/ListHoaDonChiTiet";
 import ListHoaDon from "./pages/HoaDon/ListHoaDon";
 import ListNSX from "./pages/NSX/ListNSX";
+import ListMS from "./pages/MauSac/ListMauSac";
 import AddNSX from "./pages/NSX/CreateNSX";
 import ListLoai from "./pages/Loai/ListLoai";
 import SanPhamDetail from "./pages/SanPham/SanPhamDetail";
@@ -28,10 +29,9 @@ const publicRouters = [
     {path: '/addSP', element: AddSP},
     {path: '/hdct/hien-thi/', element: ListHoaDonChiTiet},
     {path: '/hoa-don/hien-thi/', element: ListHoaDon},
-    {path: '/addSP', element: AddSP},
     {path: '/voucherct/new/', element: ListVoucherCT},
     {path: '/nsx/', element: ListNSX},
-    {path: '/addSP', element: AddSP},
+    {path: '/mau-sac/', element: ListMS},
     {path: '/addNSX', element: AddNSX},
     {path: '/loai/', element: ListLoai},
     {path: '/products/:id', element: SanPhamDetail},
