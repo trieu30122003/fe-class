@@ -18,6 +18,7 @@ import AddIcon from '@mui/icons-material/Add';
 import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
 import RequestQuoteOutlinedIcon from '@mui/icons-material/RequestQuoteOutlined';
 import ReceiptLongRoundedIcon from '@mui/icons-material/ReceiptLongRounded';
+import InsertDriveFileRoundedIcon from '@mui/icons-material/InsertDriveFileRounded';
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -40,7 +41,7 @@ const Sidebar = () => {
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
-              <span>Sản Phẩm</span>
+              <span>Sản Phẩm Chi Tiết</span>
             </li>
           </Link>
           <Link to="/nsx" style={{ textDecoration: "none" }}>
@@ -49,16 +50,16 @@ const Sidebar = () => {
               <span>Nhà sản xuất</span>
             </li>
           </Link>
+          <Link to="/mau-sac/" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Màu sắc</span>
+            </li>
+          </Link>
           <Link to="/loai" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
               <span>Loại</span>
-            </li>
-          </Link>
-          <Link to="/mau-sac" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Màu sắc</span>
             </li>
           </Link>
           <Link to="/man-hinh" style={{ textDecoration: "none" }}>
@@ -82,6 +83,12 @@ const Sidebar = () => {
           <Link to="/hdct/hien-thi/" style={{ textDecoration: "none" }}>
             <li>
               <ReceiptLongRoundedIcon className="icon" />
+              <span>Hóa Đơn Chi Tiết</span>
+            </li>
+          </Link>
+          <Link to="/hoa-don/hien-thi/" style={{ textDecoration: "none" }}>
+            <li>
+              <InsertDriveFileRoundedIcon className="icon" />
               <span>Hóa Đơn</span>
             </li>
           </Link>
