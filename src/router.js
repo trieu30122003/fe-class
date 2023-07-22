@@ -14,6 +14,7 @@ import ListVoucherCT from "./pages/VoucherCT/ListVoucherCT";
 import CreateKhachHang from "./pages/KhachHang/CreateKhachHang";
 import ViewKhachHang from "./pages/KhachHang/ViewKhachHang";
 import CreateNhanVien from "./pages/NhanVien/CreateNhanVien";
+import ListNhanVien from "./pages/NhanVien/ListNhanVien";
 
 
 const publicRouters = [
