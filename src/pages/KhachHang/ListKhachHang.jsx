@@ -89,7 +89,7 @@ class ListKhachHang extends Component {
                                                     <td> {kh.email}</td>
                                                     <td> {kh.tinhTrang === 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
                                                     <td>
-                                                        <Link to={`/new/${kh.id}`}>
+                                                        <Link to={`/hien-thi/${kh.id}`}>
                                                             <button className="btn btn-info">View </button>
                                                         </Link>
                                                         {/* <button style={{ marginLeft: "10px" }} onClick={() => this.viewKH(kh.id)} className="btn btn-info">View </button> */}

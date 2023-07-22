@@ -76,11 +76,11 @@ class ListNSX extends Component {
                                                 <tr key={nsx.id}>
                                                     <td> {nsx.ma} </td>
                                                     <td>{nsx.ten}</td>
-                                                    <td> {nsx.tinhTrang == 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
-                                                    <td>
+                                                    <td> {nsx.tinhTrang === 1 ? "Hoạt động" : "Ngừng hoạt động"}</td>
+                                                    {/* <td>
                                                         <button onClick={() => this.deleteNSX(nsx.id)} className="btn btn-info">Delete </button>
                                                         <button style={{ marginLeft: "10px" }} onClick={() => this.viewEmployee(nsx.id)} className="btn btn-info">View </button>
-                                                    </td>
+                                                    </td> */}
                                                 </tr>
                                         )
                                     }

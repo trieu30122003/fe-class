@@ -13,8 +13,10 @@ import ListLoai from "./pages/Loai/ListLoai";
 import SanPhamDetail from "./pages/SanPham/SanPhamDetail";
 import ListVoucherCT from "./pages/VoucherCT/ListVoucherCT";
 import CreateKhachHang from "./pages/KhachHang/CreateKhachHang";
+import CreateHoaDon from "./pages/HoaDon/CreateHoaDon";
 import ViewKhachHang from "./pages/KhachHang/ViewKhachHang";
 import CreateNhanVien from "./pages/NhanVien/CreateNhanVien";
+import ViewHoaDon from "./pages/HoaDon/ViewHoaDon";
 
 
 const publicRouters = [
@@ -37,6 +39,8 @@ const publicRouters = [
     {path: '/products/:id', element: SanPhamDetail},
     {path: '/new/add', element: CreateKhachHang},
     {path: '/new/:id', element: ViewKhachHang},
+    {path: '/addHD', element: CreateHoaDon},
+    {path: '/hien-thi/:id', element: ViewHoaDon},
 
 ]
 const privateRouters = []

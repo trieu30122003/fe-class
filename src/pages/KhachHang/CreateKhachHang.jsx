@@ -44,7 +44,7 @@ class CreateKhachHang extends Component {
                 <Sidebar />
                 <div className="homeContainer">
                     <Navbar />
-                    <h2 className="text-center">Add Sản Phẩm</h2>
+                    <h2 className="text-center">Add Khách Hàng</h2>
                     <div className='card-body'>
                         <form>
                             <div className='form-group'>

@@ -106,6 +106,7 @@ class CreateSanPham extends Component {
   changeSanPham = (event) => {
     this.setState({ selectedSanPham: event.target.value });
   }
+
   saveSPCT(e) {
     e.preventDefault();
     let sp = {

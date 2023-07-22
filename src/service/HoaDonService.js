@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/hoa-don/hien-thi/";
+const EMPLOYEE_API_BASE_URL = "http://localhost:8080/hoa-don/hien-thi";
 
 class HoaDonService {
 
     getHD(){
-        return axios.get(EMPLOYEE_API_BASE_URL);
+        return axios.get(EMPLOYEE_API_BASE_URL + '/');
     }
 
     createHD(employee){
