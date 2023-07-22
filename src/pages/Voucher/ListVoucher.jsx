@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import KhachHangService from '../../service/KhachHangService';
 import { Link } from 'react-router-dom';
 import "../admin/home/home.scss";
 import Sidebar from '../../components/sidebar/Sidebar';
@@ -19,7 +18,7 @@ class ListVoucher extends Component {
     }
 
     viewVouCher(id) {
-        this.props.history.push(`/new/${id}`);
+        this.props.history.push(`/voucher/new/${id}`);
     }
     editVouCher(id) {
         this.props.history.push(`/new/${id}`);
@@ -34,7 +33,6 @@ class ListVoucher extends Component {
     addVoucher() {
         this.props.history.push('/new/');
     }
-
     render() {
         return (
             <div className="home">
@@ -76,10 +74,11 @@ class ListVoucher extends Component {
                                                     <td>{vc.soTienGiam}</td>
                                                     <td>{vc.soLuong}</td>
                                                     <td>{vc.trangThai==1?"Hoạt Động":"Không Hoạt Động"}</td>
-                                                 <td>
-                                                        <button onClick={() => this.editEmployee(vc.id)} className="btn btn-info">Update </button>
-                                                        <button style={{ marginLeft: "10px" }} onClick={() => this.viewEmployee(vc.id)} className="btn btn-info">View </button>
-                                                    </td>
+                                                    <td>
+                                                        <Link to={`/voucher/new/${vc.id}`}>
+                                                            <button className="btn btn-info">View </button>
+                                                        </Link>
+                                                           </td>
                                                 </tr>
                                         )
                                     }

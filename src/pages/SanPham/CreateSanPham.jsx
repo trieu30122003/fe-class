@@ -10,8 +10,6 @@ import MauSacService from '../../service/MauSacService';
 import SanPhamService from '../../service/SanPhamService';
 import DayDeoService from '../../service/DayDeoService';
 
-
-
 class CreateSanPham extends Component {
   constructor(props) {
     super(props)
