@@ -3,7 +3,6 @@ import Home from "./pages/admin/home/Home";
 import ListKhachHang from "./pages/KhachHang/ListKhachHang";
 import ListSanPham from "./pages/SanPham/ListSanPham";
 import AddSP from "./pages/SanPham/CreateSanPham";
-import ListNhanVien from "./pages/NhanVien/ListNhanVien";
 import ListVoucher from "./pages/Voucher/ListVoucher";
 import ListHoaDon from "./pages/HoaDon/ListHoaDon";
 import ListNSX from "./pages/NSX/ListNSX";
