@@ -1,80 +1,102 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Sidebar from '../../components/sidebar/Sidebar';
 import { Navbar } from 'react-bootstrap';
-import MauSacService from '../../service/MauSacService';
+import ScoreServices from '../../service/DayDeoService';
+import LoaiService from '../../service/LoaiService';
+import KhachHangService from '../../service/KhachHangService';
+// import './CreateScore.scss'
 
+function back() {
+    // eslint-disable-next-line no-restricted-globals
+    history.back();
+};
 
-class CreateNSX extends Component {
+class CreateSubject extends Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {
-            ma: '',
-            ten: '',
-            tinhTrang: ''
+            id: '',
+            name:'',
+            isDeleted:false
+        };
 
-        }
-        this.changeMaHandler = this.changeMaHandler.bind(this)
-        this.changeTenHandler = this.changeTenHandler.bind(this)
-        this.changeTrangThaiHandler = this.changeTrangThaiHandler.bind(this)
-        this.saveMauSac = this.saveMauSac.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.save = this.save.bind(this);
     }
-    saveMauSac(e){
+    // componentDidMount() {
+    //     // Fetch all subjects
+    //     LoaiService.getLoai()
+    //         .then(response => {
+    //             this.setState({ subjects: response.data.content });
+    //         })
+    //         .catch(error => {
+    //             console.error("Error fetching subjects:", error);
+    //             this.setState({ errorMessage: "Error loading subjects" });
+    //         });
+
+    //     // Fetch all students
+    //     KhachHangService.getKH()
+    //         .then(response => {
+    //             this.setState({ users: response.data.content });
+    //         })
+    //         .catch(error => {
+    //             console.error("Error fetching students:", error);
+    //             this.setState({ errorMessage: "Error loading students" });
+    //         });
+    // }
+    handleChange(event) {
+        const { name, value } = event.target;
+        this.setState({ [name]: value });
+    }
+
+    save(e) {
         e.preventDefault();
-        let ms = { ma: this.state.ma, ten: this.state.ten, tinhTrang: this.state.tinhTrang };
-        console.log('mauSac  =>' + JSON.stringify(ms));
-        MauSacService.createMS(ms).then(res =>{
-            alert("Thêm thành công");
-        })
-        window.location.href="/mau-sac/"
+        let scoreData = {
+            // id: this.state.id,
+            // dateScore: this.state.dateScore,
+            // mark: this.state.mark,
+            // subjectId: this.state.subjectId,
+            // userCode: this.state.userCode,
+            name: this.state.name,
+            isDeleted: this.state.isDeleted
+        };
+        console.log('Score data => ' + JSON.stringify(scoreData));
+
+        LoaiService.createNSX(scoreData)
+            .then(response => {
+                console.log('Score created successfully', response);
+                back(); // Quay lại danh sách
+            })
+            .catch(error => {
+                this.setState({ errorMessage: error.response?.data?.message || "An error occurred" });
+            });
     }
-    changeMaHandler(event) {
-        this.setState({ ma: event.target.value })
-    }
-    changeTenHandler(event) {
-        this.setState({ ten: event.target.value })
-    }
-    changeTrangThaiHandler(event) {
-        this.setState({ tinhTrang: event.target.value })
-    }
-    cancel() {
-        this.props.history.push("/nsx")
-    }
+
     render() {
         return (
-            <div className="home">
+            <div className="home" style={{backgroundImage:'url(https://img.lovepik.com/background/20211021/medium/lovepik-modern-medical-chemistry-science-and-technology-background-image_500358408.jpg)'}}>
                 <Sidebar />
                 <div className="homeContainer">
                     <Navbar />
-                    <h2 className="text-center">Add Sản Phẩm</h2>
-                    <div className='card-body'>
-                        <form>
-                            <div className='form-group'>
-                                <label htmlFor="">Mã</label>
-                                <input type="text" placeholder='Nhập mã' name='ma' className='form-control'
-                                    value={this.state.ma} onChange={this.changeMaHandler} />
+                    <div className="container" style={{marginLeft:'150px'}}>
+                        <h2 style={{color:'white'}}>Create Subject</h2>
+                        {this.state.errorMessage && (
+                            <p style={{ color: 'red' }}>{this.state.errorMessage}</p>
+                        )}
+                        <form onSubmit={this.save}>
+                            <div style={{position:'relative', left:'120px'}}>
+                                <label style={{color:'pink'}}>Name</label>
+                                <input placeholder='Nhập tên môn học' type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
                             </div>
-                            <div className='form-group'>
-                                <label htmlFor="">Tên</label>
-                                <input type="text" placeholder='Nhập tên' name='ten' className='form-control'
-                                    value={this.state.ten} onChange={this.changeTenHandler} />
-                            </div>
-                            <div className='form-group'>
-                                <label htmlFor="">Trạng Thái</label>
-                                <input type="text" placeholder='Nhập trạng thái' name='tinhTrang' className='form-control'
-                                    value={this.state.tinhTrang} onChange={this.changeTrangThaiHandler} />
-                            </div>
-                            <button className='btn btn-outline-primary' onClick={this.saveMauSac}> ADD</button>
-
+                            <button type="submit">Save</button>
+                            <button type="button" onClick={back}>Back</button>
                         </form>
-
                     </div>
-
                 </div>
             </div>
-
-        )
+        );
     }
-
 }
-export default CreateNSX;
+
+export default CreateSubject;

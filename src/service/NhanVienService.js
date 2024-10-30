@@ -1,25 +1,29 @@
 import axios from 'axios';
 
-const NHANVIEN_API_BASE_URL = "http://localhost:8080/nhan-vien/new";
+const KHACHHANG_API_BASE_URL = "http://localhost:8080/user";
 
 class NhanVienService {
 
-    getNV(){
-        return axios.get(NHANVIEN_API_BASE_URL+ '/');
+    getKH(page,size){
+        return axios.post(`${KHACHHANG_API_BASE_URL}/?page=${page}&size=${size}`,{
+            "role": "TEACHER"
+        });
     }
 
-    createNV(employee){
-        return axios.post(NHANVIEN_API_BASE_URL, employee);
+    createKH(kh){
+        return axios.post(KHACHHANG_API_BASE_URL + '/create', kh);
     }
 
-    getNVById(id){
-        return axios.get(NHANVIEN_API_BASE_URL + '/' + id);
+    getKHById(id) { 
+        return axios.get(`${KHACHHANG_API_BASE_URL}/detail?id=${id}`);
     }
+    
 
-    updateNV(nv, employeeId){
-        return axios.put(NHANVIEN_API_BASE_URL + '/' + employeeId, nv);
+    updateKH(kh){
+        console.log("sdfsdf:  ",kh);
+        
+        return axios.post(KHACHHANG_API_BASE_URL + '/update' ,  kh);
     }
-
 }
 
 export default new NhanVienService ()

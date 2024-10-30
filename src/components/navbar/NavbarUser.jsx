@@ -6,8 +6,7 @@ import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlin
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
-import { DarkModeContext } from "../../context/darkModeContext";
-import { useContext, useState } from "react";
+
 import User from "./User";
 // import { Container, Navbar } from "react-bootstrap";
 // import * as ReactBootStrap from "react-bootstrap";
@@ -15,9 +14,6 @@ import User from "./User";
 
 
 const NavbarUser = () => {
-  const { dispatch } = useContext(DarkModeContext);
-  const [open, setOpen] = useState(false)
-
   return (
     <div className="navbar">
       <div className="wrapper" style={{padding: "0px", margin: "0 5px"}}>

@@ -1,175 +1,90 @@
 import "./sidebar.scss";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
-import StoreIcon from "@mui/icons-material/Store";
-import InsertChartIcon from "@mui/icons-material/InsertChart";
-import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
-import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
-import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import DashboardIcon from "@mui/icons-material/Home"; // Changed to Home
+import ExitToAppIcon from "@mui/icons-material/PowerSettingsNew"; // Changed to PowerSettingsNew
 import { Link } from "react-router-dom";
-import { DarkModeContext } from "../../context/darkModeContext";
-import { useContext } from "react";
-import AddIcon from '@mui/icons-material/Add';
-import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
-import RequestQuoteOutlinedIcon from '@mui/icons-material/RequestQuoteOutlined';
-import ReceiptLongRoundedIcon from '@mui/icons-material/ReceiptLongRounded';
-import InsertDriveFileRoundedIcon from '@mui/icons-material/InsertDriveFileRounded';
+import AddIcon from '@mui/icons-material/PersonAdd'; // Changed to PersonAdd
+import ManOutlinedIcon from '@mui/icons-material/PeopleOutline'; // Changed to PeopleOutline
+import ScoreIcon from '@mui/icons-material/Grade'; // Added a new icon for Score
+import ClassIcon from '@mui/icons-material/Class'; // Added a new icon for Class
+import ScheduleIcon from '@mui/icons-material/Schedule'; // Added a new icon for Schedule
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 
 const Sidebar = () => {
-  const { dispatch } = useContext(DarkModeContext);
   return (
-    <div className="sidebar">
+    <div className="sidebar" style={{ backgroundColor: '#003366', color: 'yellow' }}>
       <div className="top">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Rolex</span>
+        <Link to="/" style={{ textDecoration: "none", color: 'yellow' }}>
+          <span className="logo">APTECH</span>
         </Link>
       </div>
-      <hr />
+      <hr style={{ border: '1px solid black', margin: '0 auto', width: '80%' }} />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
           <li>
-            <DashboardIcon className="icon" />
+            <DashboardIcon className="icon" style={{ color: 'yellow' }} />
             <span>Dashboard</span>
           </li>
-          <p className="title">Quản Lý sản phẩm</p>
-          <Link to="/products" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Sản Phẩm Chi Tiết</span>
-            </li>
-          </Link>
-          <Link to="/nsx" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Nhà sản xuất</span>
-            </li>
-          </Link>
-          <Link to="/mau-sac/" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Màu sắc</span>
-            </li>
-          </Link>
-          <Link to="/loai" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Loại</span>
-            </li>
-          </Link>
-          <Link to="/man-hinh" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Màn hình</span>
-            </li>
-          </Link>
-          <Link to="/day-deo" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Dây đeo</span>
-            </li>
-          </Link>
-          <Link to="/new/" style={{ textDecoration: "none" }}>
-            <li>
-              <AddIcon className="icon" />
-              <span>khách hàng</span>
-            </li>
-          </Link>
-          <Link to="/hdct/hien-thi/" style={{ textDecoration: "none" }}>
-            <li>
-              <ReceiptLongRoundedIcon className="icon" />
-              <span>Hóa Đơn Chi Tiết</span>
-            </li>
-          </Link>
-          <Link to="/hoa-don/hien-thi/" style={{ textDecoration: "none" }}>
-            <li>
-              <InsertDriveFileRoundedIcon className="icon" />
-              <span>Hóa Đơn</span>
-            </li>
-          </Link>
-          <Link to="/voucher/new/" style={{ textDecoration: "none" }}>
-            <li>
-              < RequestQuoteOutlinedIcon className="icon" />
-              <span>Voucher</span>
-            </li>
-          </Link>
-          <Link to="/voucherct/new/" style={{ textDecoration: "none" }}>
-            <li>
-              < RequestQuoteOutlinedIcon className="icon" />
-              <span>VoucherCT</span>
-            </li>
-            
+          <p className="title">MANAGE</p>
 
-          </Link>
-
-          <Link to="/nhan-vien/new/" style={{ textDecoration: "none" }}>
+          <Link to="/add-st" style={{ textDecoration: "none", color: 'yellow' }}>
             <li>
-              <ManOutlinedIcon className="icon" />
-              <span>Nhân Viên</span>
+              <AddIcon className="icon" style={{ color: 'yellow' }} />
+              <span>ADD</span>
+            </li>
+          </Link>
+          <Link to="/add-score" style={{ textDecoration: "none", color: 'yellow' }}>
+            <li>
+              <ScoreIcon className="icon" style={{ color: 'yellow' }} />
+              <span>Score</span>
+            </li>
+          </Link>
+          <Link to="/new/" style={{ textDecoration: "none", color: 'yellow' }}>
+            <li>
+              <AddIcon className="icon" style={{ color: 'yellow' }} />
+              <span>STUDENT</span>
+            </li>
+          </Link>
+          <Link to="/class" style={{ textDecoration: "none", color: 'yellow' }}>
+            <li>
+              <ClassIcon className="icon" style={{ color: 'yellow' }} />
+              <span>CLASS</span>
+            </li>
+          </Link>
+          <Link to="/add-to-class" style={{ textDecoration: "none", color: 'yellow' }}>
+            <li>
+              <AddIcon className="icon" style={{ color: 'yellow' }} />
+              <span>ADD TO CLASS</span>
+            </li>
+          </Link>
+          <Link to="/nhan-vien/new/" style={{ textDecoration: "none", color: 'yellow' }}>
+            <li>
+              <ManOutlinedIcon className="icon" style={{ color: 'yellow' }} />
+              <span>TEACHER</span>
+            </li>
+          </Link>
+          <Link to="/schedule" style={{ textDecoration: "none", color: 'yellow' }}>
+            <li>
+              <ScheduleIcon className="icon" style={{ color: 'yellow' }} />
+              <span>SCHEDULE</span>
+            </li>
+          </Link>
+          <Link to="/subject" style={{ textDecoration: "none", color: 'yellow' }}>
+            <li>
+              <MenuBookIcon className="icon" style={{ color: 'yellow' }} />
+              <span>Subject</span>
             </li>
           </Link>
 
-          <Link to="/properties" style={{ textDecoration: "none" }}>
-            <li>
-              <StoreIcon className="icon" />
-              <span>Thuộc tính</span>
-            </li>
-          </Link>
-          <li>
-            <CreditCardIcon className="icon" />
-            <span>Orders</span>
-          </li>
-          <li>
-            <LocalShippingIcon className="icon" />
-            <span>Delivery</span>
-          </li>
-          <p className="title">USEFUL</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Stats</span>
-          </li>
-          <li>
-            <NotificationsNoneIcon className="icon" />
-            <span>Notifications</span>
-          </li>
-          <p className="title">SERVICE</p>
-          <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>System Health</span>
-          </li>
-          <li>
-            <PsychologyOutlinedIcon className="icon" />
-            <span>Logs</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Settings</span>
-          </li>
-          <p className="title">USER</p>
-          <li>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
-          </li>
-          <li>
-            <ExitToAppIcon className="icon" />
-            <span>Logout</span>
-          </li>
         </ul>
       </div>
-      <div className="bottom">
-        <div
-          className="colorOption"
-          onClick={() => dispatch({ type: "LIGHT" })}
-        ></div>
-        <div
-          className="colorOption"
-          onClick={() => dispatch({ type: "DARK" })}
-        ></div>
+      <div style={{ marginTop: 'auto', textAlign: 'center', padding: '20px' }}>
+        <Link to="/login" style={{ textDecoration: "none", color: 'yellow' }}>
+          <li style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <ExitToAppIcon className="icon" style={{ color: 'yellow' }} />
+            <span>Logout</span>
+          </li>
+        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,75 @@
+/* Đặt khoảng cách và canh giữa cho toàn bộ form */
+// .container {
+//     max-width: 600px;
+//     margin: 50px auto;
+//     padding: 20px;
+//     background-color: #f9f9f9;
+//     border-radius: 8px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    form {
+        /* Tạo Grid để có 2 ô trên 1 hàng */
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 cột với chiều rộng bằng nhau */
+    grid-gap: 15px; /* Khoảng cách giữa các ô cả ngang và dọc */
+    grid-column-gap: 30px; /* Khoảng cách ngang giữa các ô input */
+
+        /* Căn label và input trên cùng 1 hàng */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+
+            &:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+        }
+
+        /* Đặt các nút vào một hàng riêng */
+        button[type="submit"], button[type="button"] {
+            grid-column: span 2; /* Nút chiếm toàn bộ chiều ngang */
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+
+        button[type="button"] {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+        }
+
+        /* Đặt style cho các lỗi */
+        p {
+            grid-column: span 2; /* Thông báo lỗi cũng chiếm toàn bộ chiều ngang */
+            color: red;
+            text-align: center;
+        }
+    }
+// }

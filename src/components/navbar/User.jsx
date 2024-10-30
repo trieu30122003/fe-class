@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import { FormControl } from 'react-bootstrap';
 import Dropdown from "react-bootstrap/Dropdown";
 
@@ -17,7 +17,6 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
 
 const CustomMenu = React.forwardRef(
   ({ children, style, className, "aria-labelledby": labeledBy }, ref) => {
-    const [value, setValue] = useState("");
 
     return (
       <div

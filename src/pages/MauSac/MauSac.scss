@@ -1,26 +1,19 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
 
-#customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+
+      &:first-child {
+          // Optional: Style for the first cell in each row (if needed)
+      }
   }
-  
-  #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
+
+  th {
+      background-color: #f2f2f2;
   }
-  
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ddd;}
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  
-  
+}
